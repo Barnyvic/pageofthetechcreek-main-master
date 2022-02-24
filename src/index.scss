@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Ubuntu&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+}
+@import "../src/components/NotFound/Notfound.scss";
+@import "../src/components/navbar/navbar.scss";
+@import "../src/components/HeaderBody/Headerbody.scss";
+@import "../src/components/Sign-in/Signin.scss";
+@import "../src/components/Register/Register.scss";
+@import "../src/components/Form/form.scss";
+@import "../src/components/styles/learn.scss";
+@import "../src/components/Modal/Modalpage.scss";
+@import "../src/components/Pages/pages.scss";
+@import "../src/components/DataFetch/Datafetch.scss";
+@import "../src/components/Cards/Cards.scss";
