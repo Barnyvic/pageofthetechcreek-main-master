@@ -1,6 +1,44 @@
 import { useState } from "react";
+import { db } from "../Firebase";
+import "firebase/database";
 
 const Form = () => {
+  const [firstname, setFirstName] = useState("");
+  const [middlename, setMiddleName] = useState("");
+  const [lastname, setLastName] = useState("");
+  const [dateofbirth, setDateofbirth] = useState("");
+  const [education, setEducation] = useState("");
+  const [gender, setGender] = useState("");
+  const [stateoforigin, setStateOfOrigin] = useState("");
+  const [local, setLocalGoverment] = useState("");
+  const [email, setEmail] = useState("");
+  const [phonenumber, setPhonenumber] = useState("");
+  const [address, setAddress] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    db.collection("Registration")
+      .add({
+        firstName: firstname,
+        middleName: middlename,
+        lastName: lastname,
+        dateofBirth: dateofbirth,
+        Education: education,
+        Gender: gender,
+        Stateoforigin: stateoforigin,
+        Local: local,
+        Email: email,
+        Phonenumber: phonenumber,
+        Address: address,
+      })
+      .then(() => {
+        alert("Message has been submited");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
 
   return (
     <div className="application--modal">
@@ -43,44 +81,82 @@ const Form = () => {
               <div className="header">
                 <h5>Personal Information</h5>
               </div>
-
               <div className="personal--information--form">
                 <div className="first--row">
-                  <form action="" method="post">
+                  <form action="" onSubmit={handleSubmit} method="post">
                     <label htmlFor="firstname">
-                      <input type="text" placeholder="First Name*" />
+                      <input
+                        type="text"
+                        value={firstname}
+                        onChange={(e) => {
+                          setFirstName(e.target.value);
+                        }}
+                        required
+                        placeholder="First Name*"
+                      />
                     </label>
                   </form>
 
-                  <form action="">
+                  <form onSubmit={handleSubmit} action="">
                     {/* middlename form */}
                     <label htmlFor="middlename">
-                      <input type="text" placeholder="Middle Name*" />
+                      <input
+                        type="text"
+                        value={middlename}
+                        onChange={(e) => {
+                          setMiddleName(e.target.value);
+                        }}
+                        required
+                        placeholder="Middle Name*"
+                      />
                     </label>
                   </form>
 
-                  <form action="">
+                  <form onSubmit={handleSubmit} action="">
                     {/* lastname form */}
 
                     <label htmlFor="lname">
-                      <input type="text" placeholder="Last Name*" />
+                      <input
+                        type="text"
+                        value={lastname}
+                        onChange={(e) => {
+                          setLastName(e.target.value);
+                        }}
+                        required
+                        placeholder="Last Name*"
+                      />
                     </label>
                   </form>
                 </div>
 
-                <div className="second--row">
+                <div onSubmit={handleSubmit} className="second--row">
                   {/* dateofbirth form */}
                   <form>
                     <label htmlFor="date">
-                      <input type="text" placeholder="Date of Birth*" />
+                      <input
+                        type="text"
+                        value={dateofbirth}
+                        onChange={(e) => {
+                          setDateofbirth(e.target.value);
+                        }}
+                        required
+                        placeholder="Date of Birth*"
+                      />
                     </label>
                   </form>
 
-                  <form action="">
+                  <form onSubmit={handleSubmit} action="">
                     {/* select education form */}
 
                     <label for htmlFor="select">
-                      <select className="education--section">
+                      <select
+                        value={education}
+                        onChange={(e) => {
+                          setEducation(e.target.value);
+                        }}
+                        required
+                        className="education--section"
+                      >
                         --Select Education--
                         <option value="--Select Education">
                           --Select Education--
@@ -97,11 +173,17 @@ const Form = () => {
                     </label>
                   </form>
 
-                  <form>
-                    {/* gender form */}
-
+                  {/* gender form */}
+                  <form onSubmit={handleSubmit}>
                     <label htmlFor="gender">
-                      <select className="gender--selection">
+                      <select
+                        value={gender}
+                        onChange={(e) => {
+                          setGender(e.target.value);
+                        }}
+                        required
+                        className="gender--selection"
+                      >
                         <option value="--gender--">--gender--</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
@@ -111,9 +193,15 @@ const Form = () => {
                 </div>
 
                 <div className="third--row">
-                  <form action="">
-                    {/* state of origin form */}
-                    <select>
+                  {/* state of origin form */}
+                  <form onSubmit={handleSubmit} action="">
+                    <select
+                      value={stateoforigin}
+                      onChange={(e) => {
+                        setStateOfOrigin(e.target.value);
+                      }}
+                      required
+                    >
                       <option value="--Select State of Origin--">
                         --Select State of Origin--
                       </option>
@@ -157,10 +245,17 @@ const Form = () => {
                     </select>
                   </form>
 
-                  <form action="">
-                    {/* l.g.a form */}
+                  {/* l.g.a form */}
+                  <form onSubmit={handleSubmit} action="">
                     <label htmlFor="L.G.A of Origin">
-                      <input type="text" placeholder="L.G.A of Origin" />
+                      <input
+                        type="text"
+                        value={local}
+                        onChange={(e) => {
+                          setLocalGoverment(e.target.value);
+                        }}
+                        placeholder="L.G.A of Origin"
+                      />
                     </label>
                   </form>
                 </div>
@@ -173,27 +268,19 @@ const Form = () => {
           </div>
 
           <div className="form--section">
-            <div className="forma">
-            </div>
+            <div className="forma"></div>
 
             <div className="formb">
-              <form>
-               
-              </form>
+              <form></form>
             </div>
 
             <div className="formc">
-              <form>
-               
-              </form>
+              <form></form>
             </div>
           </div>
 
           <div class="origin">
-            <div class="select-style">
-             
-            </div>
-
+            <div class="select-style"></div>
           </div>
 
           <div className="contact--information--section">
@@ -201,21 +288,42 @@ const Form = () => {
 
             <div className="form--section">
               <div className="lastform">
-                <form className="lastforma">
+                <form onSubmit={handleSubmit} className="lastforma">
                   <div className="emai">
                     <label htmlFor="email">
-                      <input type="text" placeholder="Email Address*" />
+                      <input
+                        type="text"
+                        value={email}
+                        onChange={(e) => {
+                          setEmail(e.target.value);
+                        }}
+                        required
+                        placeholder="Email Address*"
+                      />
                     </label>
                   </div>
                 </form>
               </div>
-              <div className="phone">
+              <div onSubmit={handleSubmit} className="phone">
                 <label htmlFor="phone">
-                  <input type="text" placeholder="Phone Number*" />
+                  <input
+                    type="text"
+                    value={phonenumber}
+                    onChange={(e) => {
+                      setPhonenumber(e.target.value);
+                    }}
+                    required
+                    placeholder="Phone Number*"
+                  />
                 </label>
               </div>
 
               <textarea
+                onSubmit={handleSubmit}
+                value={address}
+                onChange={(e) => {
+                  setAddress(e.target.value);
+                }}
                 name=""
                 id=""
                 cols="1000"
@@ -224,7 +332,7 @@ const Form = () => {
               ></textarea>
             </div>
             <div className="btn">
-              <button>SUBMIT</button>
+              <button type="submit">SUBMIT</button>
             </div>
           </div>
         </div>

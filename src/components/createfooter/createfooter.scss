@@ -1,0 +1,43 @@
+.footerContainer {
+  // height: 20vh;
+  background: #0544a8;
+  .footergridcont {
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem;
+    .socials {
+      margin-left: 1rem;
+      cursor: pointer;
+      a {
+        text-decoration: none;
+      }
+    }
+    .location {
+      p {
+        font-size: 1rem;
+      }
+    }
+    .School {
+      margin-left: 2rem;
+      ul {
+        list-style: none;
+        cursor: pointer;
+        margin-right: 1rem;
+      }
+    }
+    .Resources {
+      ul {
+        list-style: none;
+        cursor: pointer;
+        margin-right: 1rem;
+        li {
+          .item {
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

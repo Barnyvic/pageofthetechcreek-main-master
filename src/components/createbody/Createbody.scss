@@ -1,0 +1,51 @@
+.container {
+  .Create-container {
+    margin-top: 15%;
+    .learningpart {
+      display: flex;
+      align-items: center;
+      padding: 2rem;
+      justify-content: space-between;
+      background: #fdfdfd;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      h1 {
+        flex: 1;
+        margin-left: 3rem;
+      }
+      p {
+        flex: 2;
+        word-break: break-all;
+      }
+    }
+    h4 {
+      margin-top: 3%;
+      span {
+        color: #0544a8;
+      }
+    }
+    .gridcontainer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding: 1rem;
+      background: rgb(255, 246, 238);
+       position: relative;
+        animation: createmove;
+        animation-duration: 7s;
+         @keyframes createmove {
+        0% {
+          left: -600px;
+        }
+        100% {
+          left: 0px;
+        }
+      }
+      .cardcontainer {
+        text-align: center;
+        color: #0544a8;
+        padding: 1rem;
+       
+      }
+    }
+  }
+}

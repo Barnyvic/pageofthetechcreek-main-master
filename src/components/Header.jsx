@@ -5,17 +5,20 @@ import Create from "./Pages/Create";
 import Learn from "./Pages/Learn";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NotFound from "./NotFound/NotFound";
+import About from "./Pages/About";
 
 const HEADER = () => {
   return (
     <div className="Container">
       <Router>
         <Navbar />
+
         <Routes>
           <Route path="/" element={<HeaderBody />} />
           <Route path="/learn" element={<Learn />} />
           <Route path="/create" element={<Create />} />
           <Route path="/connect" element={<Connects />} />
+          <Route path="/Aboutus" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

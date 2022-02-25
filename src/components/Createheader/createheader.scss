@@ -1,0 +1,25 @@
+.Createimgoverlay {
+  .container {
+    height: 70vh;
+    background: url(../assets/creatimg.jpg) no-repeat center center/cover;
+    img {
+      width: 10%;
+      border-radius: 50%;
+      position: absolute;
+      top: 75%;
+      left: 10%;
+      cursor: pointer;
+    }
+    h3 {
+      position: absolute;
+      top: 81%;
+      left: 25%;
+      font-weight: bold;
+    }
+    h5 {
+      position: absolute;
+      top: 88%;
+      left: 25%;
+    }
+  }
+}

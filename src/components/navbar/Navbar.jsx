@@ -11,6 +11,7 @@ const Navbar = () => {
     { title: "Learn", path: "/learn" },
     { title: "Create", path: "/create" },
     { title: "Connect", path: "/connect" },
+    { title: "Aboutus", path: "/Aboutus" },
   ];
   // for modal
   const [show, setShow] = useState(false);
