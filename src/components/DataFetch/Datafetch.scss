@@ -1,66 +1,92 @@
 @import "../styles/variable";
 .DataContainer {
-  background: url("../assets/bg-land.svg") no-repeat center center/cover;
-  .Blogcontainer {
-    display: grid;
-    padding: 2rem 4rem;
-    gap: 2rem;
-    grid-template-columns: repeat(2, 1fr);
-    .card__container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-      animation: movingdiv;
-      position: relative;
-      animation-duration: 5s;
-      img {
-        object-fit: cover;
-      }
-      @keyframes movingdiv {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
+  .container {
+    height: 70vh;
+    background: url(../assets/imgLearn.jpg) no-repeat center center/cover;
+    // background: red;
+    img {
+      width: 10%;
+      border-radius: 50%;
+      position: absolute;
+      top: 70%;
+      left: 10%;
+      cursor: pointer;
     }
+    h3 {
+      position: absolute;
+      top: 81%;
+      left: 22%;
+      font-weight: bold;
+    }
+    h5 {
+      position: absolute;
+      top: 88%;
+      left: 22%;
+      color: #858181;
+    }
+  }
+  .Grid-learn {
+    width: 1000px;
+    margin: 0 auto;
+    .learngridcontainer {
+      .BlogContent {
+       
+      }
+      display: grid;
+      margin-top: 20%;
+      grid-template-columns: 2fr 4fr;
+      gap: 2rem;
+      .videoContent {
+        .Blogcontainer {
+          gap: 3rem;
+          .card__container {
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            img {
+              object-fit: cover;
+            }
+          }
 
-    .Card_content {
-      margin-left: 1rem;
-      padding: 1rem;
-      .Title {
-        font-weight: bold;
-      }
-      .description {
-        font-weight: bold;
-      }
-    }
-    .btn__container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      .date {
-        span {
-          font-weight: bold;
+          .Card_content {
+            .Title {
+              font-weight: bold;
+            }
+            .description {
+              font-weight: bold;
+            }
+          }
+          .btn__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .date {
+              span {
+                font-weight: bold;
+              }
+            }
+            p {
+              span {
+                font-weight: bold;
+              }
+            }
+          }
+          button {
+            border: none;
+            background-color: $dark-blue-color;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+          }
+          button:hover {
+            background-color: #0f151f;
+          }
         }
       }
-      p {
-        span {
-          font-weight: bold;
-        }
-      }
-    }
-    button {
-      border: none;
-      background-color: $dark-blue-color;
-      color: white;
-      padding: 8px 15px;
-      border-radius: 5px;
-    }
-    button:hover {
-      background-color: #0f151f;
     }
   }
 }
