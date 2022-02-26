@@ -1,5 +1,11 @@
 import Card from "react-bootstrap/Card";
 import Learn from "../assets/logolearn.jpg";
+import blog1 from "../assets/post2.jpg";
+import blog2 from "../assets/post3.jpg";
+import blog3 from "../assets/post4.jpg";
+import blog4 from "../assets/post5.jpg";
+import blog5 from "../assets/blogpost1.jpg";
+
 const Datafetch = ({ blogs, loading }) => {
   if (loading) return <h>Loading...</h>;
 
@@ -13,17 +19,84 @@ const Datafetch = ({ blogs, loading }) => {
       <div className="Grid-learn">
         <div className="learngridcontainer">
           <div className="BlogContent">
-            <h4>Blog</h4>
-            <Card style={{ width: "25rem" }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                 <p>    </p>
-                </Card.Text>
-                <button variant="primary">Go somewhere</button>
-              </Card.Body>
-            </Card>
+            <h4>Blogs</h4>
+            <div className="Blog_Container-content">
+              <div className="Blog__content">
+                <Card style={{ width: "25rem" }}>
+                  <img className="Blog_img" src={blog1} alt="" />
+                  <h4>Learning in the creek</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatum itaque modi obcaecati enim et fuga porro? Nihil
+                    cumque necessitatibus, qui adipisci recusandae quod odit
+                    repellendus accusantium fugiat! Necessitatibus magni illum
+                    asperiores ad, temporibus saepe earum amet suscipit
+                    corporis,
+                  </p>
+                  <button variant="primary">More Details</button>
+                </Card>
+              </div>
+              <div className="Blog__content">
+                <Card style={{ width: "25rem" }}>
+                  <img className="Blog_img" src={blog2} alt="" />
+                  <h4>Come join us</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatum itaque modi obcaecati enim et fuga porro? Nihil
+                    cumque necessitatibus, qui adipisci recusandae quod odit
+                    repellendus accusantium fugiat! Necessitatibus magni illum
+                    asperiores ad, temporibus saepe earum amet suscipit
+                    corporis,
+                  </p>
+                  <button variant="primary">More Details</button>
+                </Card>
+              </div>
+              <div className="Blog__content">
+                <Card style={{ width: "25rem" }}>
+                  <img className="Blog_img" src={blog3} alt="" />
+                  <h4>Doing is better than perfect</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatum itaque modi obcaecati enim et fuga porro? Nihil
+                    cumque necessitatibus, qui adipisci recusandae quod odit
+                    repellendus accusantium fugiat! Necessitatibus magni illum
+                    asperiores ad, temporibus saepe earum amet suscipit
+                    corporis,
+                  </p>
+                  <button variant="primary">More Details</button>
+                </Card>
+              </div>
+              <div className="Blog__content">
+                <Card style={{ width: "25rem" }}>
+                  <img className="Blog_img" src={blog4} alt="" />
+                  <h4>Code Gaminator 10.0</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatum itaque modi obcaecati enim et fuga porro? Nihil
+                    cumque necessitatibus, qui adipisci recusandae quod odit
+                    repellendus accusantium fugiat! Necessitatibus magni illum
+                    asperiores ad, temporibus saepe earum amet suscipit
+                    corporis,
+                  </p>
+                  <button variant="primary">More Details</button>
+                </Card>
+              </div>
+              <div className="Blog__content">
+                <Card style={{ width: "25rem" }}>
+                  <img className="Blog_img" src={blog5} alt="" />
+                  <h4>Code Gaminator 10.1</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatum itaque modi obcaecati enim et fuga porro? Nihil
+                    cumque necessitatibus, qui adipisci recusandae quod odit
+                    repellendus accusantium fugiat! Necessitatibus magni illum
+                    asperiores ad, temporibus saepe earum amet suscipit
+                    corporis,
+                  </p>
+                  <button variant="primary">More Details</button>
+                </Card>
+              </div>
+            </div>
           </div>
           <div className="videoContent">
             <div className="Blogcontainer">

@@ -1,5 +1,6 @@
 @import "../styles/variable";
 .DataContainer {
+  background: #edeef0;
   .container {
     height: 70vh;
     background: url(../assets/imgLearn.jpg) no-repeat center center/cover;
@@ -29,26 +30,61 @@
     width: 1000px;
     margin: 0 auto;
     .learngridcontainer {
-      .BlogContent {
-       
-      }
       display: grid;
       margin-top: 20%;
       grid-template-columns: 2fr 4fr;
       gap: 2rem;
+      .BlogContent {
+        .Blog_Container-content {
+          margin-top: 2rem;
+          .Blog__content {
+            margin-bottom: 2rem;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            h4 {
+              padding: 1rem;
+            }
+            p {
+              padding: 1rem;
+            }
+            button {
+              border: none;
+              outline: none;
+              padding: 1rem;
+              color: white;
+              background: $dark-blue-color;
+            }
+            button:hover {
+              background: #074ec0;
+              transition: ease-in;
+            }
+          }
+        }
+      }
       .videoContent {
         .Blogcontainer {
           gap: 3rem;
           .card__container {
+            background: $light-color;
             display: flex;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
             gap: 1rem;
             margin-top: 2rem;
             padding: 1rem;
             align-items: center;
+            position: relative;
+            animation: movngcard;
+            animation-duration: 3s;
             justify-content: space-between;
             img {
               object-fit: cover;
+            }
+            @keyframes movngcard {
+              0% {
+                right: -600px;
+              }
+              100% {
+                right: 0px;
+              }
             }
           }
 
