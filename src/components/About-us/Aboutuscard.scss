@@ -1,0 +1,51 @@
+.AboutusGrid_Cont {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+  .Aboutuspic {
+    text-align: center;
+    .postion2 {
+      border-radius: 10%;
+      width: 60%;
+      position: relative;
+      top: 30%;
+      left: 2%;
+    }
+    .postion1 {
+      position: relative;
+      top: 5%;
+      left: 10%;
+      width: 20%;
+    }
+    .postion3 {
+      position: relative;
+      top: 5%;
+      left: 2%;
+      width: 20%;
+    }
+    .postion4 {
+      position: relative;
+      top: 10%;
+      right: 25%;
+      width: 20%;
+    }
+    .postion5 {
+      position: relative;
+      top: 20%;
+     left: 25%;
+      width: 20%;
+    }
+  }
+  .About-uscontent{
+    color:#0544a8;
+    display: flex;
+    margin-top: 25%;
+    align-items: center;
+    .About_Creek_content{
+  h2{
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    }
+  }
+}
