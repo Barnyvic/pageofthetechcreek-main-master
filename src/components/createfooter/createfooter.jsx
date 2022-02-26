@@ -45,6 +45,7 @@ const Createfooter = () => {
                 <li>Animation</li>
                 <li>UI/UX</li>
                 <li>Database</li>
+                <li>Cyber-Security</li>
               </ul>
             </div>
             <div className="Resources">

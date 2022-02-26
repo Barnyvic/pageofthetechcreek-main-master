@@ -2,7 +2,7 @@ import Datafetch from "../DataFetch/Datafetch";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "../Pages/pages.scss";
-// import Createfooter from "../createfooter/createfooter";
+import Createfooter from "../createfooter/createfooter";
 
 const Learn = () => {
   const [blogs, setBlog] = useState(null);
@@ -31,7 +31,7 @@ const Learn = () => {
   return (
     <div className="Learn-Main-Container">
       <Datafetch blogs={blogs} loading={loading} err={err} />
-      {/* <Createfooter /> */}
+      <Createfooter />
     </div>
   );
 };

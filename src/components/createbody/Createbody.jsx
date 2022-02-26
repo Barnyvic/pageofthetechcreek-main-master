@@ -117,7 +117,7 @@ const Createbody = () => {
             <div className="cardcontainer">
               <Card.Body>
                 <Card.Title>
-                  <h3>Virtual Reality (VR)</h3>
+                  <h3>Cyber-Security</h3>
                 </Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
                   Description

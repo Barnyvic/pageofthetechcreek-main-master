@@ -15,7 +15,7 @@
     }
     .location {
       p {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
     }
     .School {
@@ -24,6 +24,9 @@
         list-style: none;
         cursor: pointer;
         margin-right: 1rem;
+        li{
+           font-size: 0.9rem;
+        }
       }
     }
     .Resources {
@@ -34,6 +37,7 @@
         li {
           .item {
             color: white;
+             font-size: 0.9rem;
             text-decoration: none;
           }
         }
