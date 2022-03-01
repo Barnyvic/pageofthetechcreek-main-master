@@ -11,11 +11,12 @@ const Register = () => {
             <option value="Services">Services</option>
             <option value="Veteran">Veteran</option>
           </select>
+           <input type="password" required placeholder="password" />
         </div>
         <div className="terms">
           <input type="checkbox" />
           <span className="condition">
-            Accept Term and Condition
+            Accept Terms and Conditions
           </span>
         </div>
         <div className="SignUp">
